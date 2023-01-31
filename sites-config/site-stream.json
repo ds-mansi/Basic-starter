@@ -1,14 +1,15 @@
 {
   "$id": "site-entity",
   "filter": {
-    "entityIds": ["siteGlobalData"] 
+    "entityIds": ["global-data"] 
   },
   "source": "knowledgeGraph",
   "fields": [
     "name",
-    "facebookPageUrl",
-    "instagramHandle",
-    "twitterHandle"
+    "c_headerlinks",
+    "c_footerLinks",
+    "c_footerLogo"
+   
   ],
   "localization": {
     "locales": ["en"],

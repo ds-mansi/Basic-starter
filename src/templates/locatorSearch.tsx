@@ -42,7 +42,7 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({relativePrefi
   };
 };
 
-const locatorSearch: Template<TemplateRenderProps> = ({relativePrefixToRoot, path, document}) => {
+const locatorSearch: Template<TemplateRenderProps> = ({relativePrefixToRoot, path, document,__meta}) => {
 
 const { _site } = document;
 
@@ -52,7 +52,7 @@ const providerOptions: google.maps.MapOptions = {
 
 return (
     <>
-      <Header/>
+      <Header _site={_site}/>
       <div style={{marginBottom:"34%"}}>
         <SearchHeadlessProvider
             experienceKey={AnswerExperienceConfig.experienceKey}
@@ -67,7 +67,7 @@ return (
     
         </SearchHeadlessProvider>   
         </div>
-        <Footer/>
+        <Footer links={_site}/>
     </>
   );
 };

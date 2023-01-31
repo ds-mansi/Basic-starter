@@ -238,7 +238,7 @@ nav[aria-label="Pagination"] button:hover, nav[aria-label="Pagination"] button.b
     @apply bg-button-border-color text-white;
     background-color: #412E55;
     border-color: white;
-}
+}   
 nav[aria-label="Pagination"] button:disabled{
     @apply cursor-not-allowed text-opacity-60 bg-opacity-60
 }
@@ -291,7 +291,9 @@ nav[aria-label="Pagination"] button:disabled{
 }
 
 .footerLogo {
-    @apply w-full text-center mb-14
+    @apply w-full text-center mb-14;
+    text-align: left;
+    width: 20%;
 }
 
 .footerLogo .logo {

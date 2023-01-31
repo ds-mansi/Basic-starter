@@ -40,7 +40,11 @@ import {
         "name",
         "address",
         "hours",
-        "description"
+        "description",
+        "c_headerlinks",
+        "c_footerLinks",
+        "c_footerLogo"
+        
       ],
       // Defines the scope of entities that qualify for this stream.
       filter: {
@@ -118,17 +122,22 @@ import {
     document,
   }) => {
     const {
+        _site,
         name,
         address,
         hours,
         description,
+        c_headerlinks,
+        c_footerLinks,
+        c_footerLogo
+        
     } = document;
   
   
-  //console.log(c_uRL1,"c_uRL1");
+  console.log(_site.c_headerlinks);
     return (
       <>
-      <Header/>
+      <Header _site={_site}/>
       <div style={{fontSize:"30px",textAlign:"center",backgroundColor:"#E0D0F1",color:"#281845"}}>{name}</div>
       
         <div className="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-10 place-items-stretch " style={{backgroundColor:"#E0D0F1"}}>
@@ -157,7 +166,7 @@ import {
           </div>
       </div>
       
-      <Footer/>
+      <Footer links={_site}/>
       </>
     );
   };

@@ -16,7 +16,7 @@ type Props = {
   }: Props) => {
     return (
         <div className="min-h-screen">
-            <Header />
+            <Header data={_site.header}/>
                 {children}
             <Footer />
         </div>
